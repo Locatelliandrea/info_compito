@@ -1,0 +1,24 @@
+﻿<Window x:Class="QrWebCam.Demo.Biglietteria"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:QrWebCam.Demo"
+        mc:Ignorable="d"
+        Title="Biglietteria" Height="343.071" Width="695.64">
+    <Grid Margin="0,0,2,-1">
+        <Label Content="Nome:" HorizontalAlignment="Left" Margin="10,97,0,0" VerticalAlignment="Top" Height="28" Width="134"/>
+        <Label Content="Settore:" HorizontalAlignment="Left" Margin="0,174,0,0" VerticalAlignment="Top" Height="28" Width="134"/>
+        <Label Content="Cognome:" HorizontalAlignment="Left" Margin="10,130,0,0" VerticalAlignment="Top" Height="28" Width="134"/>
+        <ComboBox x:Name="Settore" HorizontalAlignment="Left" Margin="134,174,0,0" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.492,0.474"/>
+        <Button x:Name="Crea" Content="Conferma" HorizontalAlignment="Left" Margin="49,216,0,0" VerticalAlignment="Top" Width="113" Click="Button_Click" Height="32"/>
+        <Label x:Name="Risultato" Content="Label" HorizontalAlignment="Left" Margin="10,271,0,0" VerticalAlignment="Top" Width="385" Height="32"/>
+        <Label Content="artista" HorizontalAlignment="Left" Margin="283,174,0,0" VerticalAlignment="Top" Width="133"/>
+        <ComboBox x:Name="artista" HorizontalAlignment="Left" Margin="446,174,0,0" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="nome" HorizontalAlignment="Left" Height="23" Margin="129,102,0,0" TextWrapping="Wrap" Text="Inserire nome" VerticalAlignment="Top" Width="125"/>
+        <TextBox x:Name="Cognome" HorizontalAlignment="Left" Height="23" Margin="129,134,0,0" TextWrapping="Wrap" Text="Inserire  Cognome" VerticalAlignment="Top" Width="125"/>
+        <Label Content="Biglietteria Concerto" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="53" Width="608" FontSize="24" FontWeight="Bold"/>
+        <Label x:Name="posti" Content="Label" HorizontalAlignment="Left" Margin="416,271,0,0" VerticalAlignment="Top" Width="211" Height="32" RenderTransformOrigin="0.572,0.514"/>
+        <Button x:Name="cerca" Content="Cerca" HorizontalAlignment="Left" Margin="416,79,0,0" VerticalAlignment="Top" Width="150" Height="29" Click="cerca_Click"/>
+    </Grid>
+</Window>

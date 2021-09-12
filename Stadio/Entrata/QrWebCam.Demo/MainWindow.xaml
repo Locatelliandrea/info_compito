@@ -1,0 +1,29 @@
+﻿<Window x:Class="QrWebCam.Demo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:QrWebCam.Demo"
+        mc:Ignorable="d" 
+        xmlns:qwc="clr-namespace:QrWebCam;assembly=QrWebCam"
+        Title="MainWindow" Height="482.727" Width="771.364">
+    <Grid Margin="0,0,180,183">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="41*"/>
+            <ColumnDefinition Width="542*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+
+        <ComboBox SelectionChanged="camSelect_SelectionChanged" x:Name="camSelect" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="1" RenderTransformOrigin="0.467,0.45" Margin="0,10,511,141" Width="31" Height="28" Grid.Column="1" />
+        <qwc:QrWebCamControl Loaded="Window_Loaded" x:Name="webCam" Grid.Row="1" QrDecoded="QrWebCamControl_QrDecoded" Margin="0,43,446,0" Grid.ColumnSpan="2" />
+        <TextBox Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center" x:Name="dtext" Grid.Column="1" Margin="246.545,36,289,36"></TextBox>
+        <Label x:Name="Risultato" Content="Label" HorizontalAlignment="Left" Margin="13,114,0,-150" Grid.Row="2" VerticalAlignment="Top" Height="126" Width="462" Grid.ColumnSpan="2"/>
+        <Label x:Name="entrata" Content="Label" Grid.Column="1" HorizontalAlignment="Left" Margin="552,20,-167,0" Grid.Row="1" VerticalAlignment="Top" Width="157" Height="185" Grid.RowSpan="2"/>
+        <Label x:Name="info" Content="Informazioni Partita" Grid.Column="1" HorizontalAlignment="Left" Margin="480,114,-167,-150" Grid.Row="2" VerticalAlignment="Top" Height="126" Width="229"/>
+    </Grid>
+</Window>
